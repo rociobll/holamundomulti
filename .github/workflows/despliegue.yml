@@ -43,10 +43,36 @@ jobs:
 
     - name: Deploy to server
       env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        SSH_PRIVATE_KEY: -----BEGIN RSA PRIVATE KEY-----
+          MIIEogIBAAKCAQEAqZVRVq6MoPSSQfVOGjzu1sWsc/4nYkXP7l99AtZseDludUfO
+          DmZWyMpVl3NbmyV0PTuqZWF6BhQYwhbxZkvGiVHd0UHKhx8Xd7nYhSfo8KDRCP/d
+          0jwVKSMj1uxO+VlRrQirzpYZg/wHk5GNDV3EY3outmUem7cjlC7P+swio/7cQiCX
+          FWRycog1HUrHumBTqGbOD6PTuDF+CuQIM3QmhfBN0xIoIeYO3B98i8LQifIQqAx2
+          bb8qdtJlXDCcwmUNvKqZJhohh451NxB5MjDkKqdSiwZVbqaseSaCNvJDbc9Lp2kB
+          h3Q3mG7NtCp5DOdgD9PyCAP2Ix3Xb/T5JKcdJQIDAQABAoIBAEVQXc2jTKGhNYK2
+          JDU/QJQSedlzQV++jy2sY+lcATvmpYpUThm+pKwvX2qm4QN5/JfmolAL1pdTcYcr
+          X4HjaQPJrXORg5lVEP+Du8c5N9HauXYHNwBuRGvrDAQV1HXAl0y1ZZvr6AP1aJdd
+          f5y9/b53O06b6DXXVjiEJcgp1eLXZ3qQF78WyLaj6ljOGupErTZS8gPkvDHCb5qw
+          VmH+FMGO1+e26ekQDjPW+dKaEK6/YGw2CXdw+ki+nIMDju8YEhp6j7NHtBFgjM3W
+          C45Qv4BNsOxN+Q/+O+8GUE7DB5NeSpEFdvGNV72EJtOVulMMnMv55MTnfUPxmGDs
+          PeKUvsECgYEA19nkC+/hMPsRDZHHgFFS3hIQevdloJMEtjpUQ2liLseF8JmzWEVP
+          BFhpyMRsppv3ZGBut2FWc3zm4XeCuEy488d74acXUxSaY9024XjaPcJNckb3b7by
+          90RLfccu+XnrnwiIEuaOA3ziEc8y7QvuAUoihJ3aXIfc9FpE8AK0cZUCgYEAySBO
+          VeJjxIj/Dah3P+A/9AjFDBuXG0bnmEcRQQ3hnzZeHgw+mW0K4J4/XNp2ASvcANo7
+          vl2IeZEBb6ys4UB6iZ1xq6gceQ6+YCJYV30glDhr6F7AZMbMi/6n+IwOukVVlVPY
+          6gz0wYC/nvzEkkZ2divgzaKfPlf+VuZHlLPxOVECgYAdqyVdPquFP/0oEFGLoaHy
+          RClfvYGKgKq1IW9TlLiaFXKjj3zHNT+XKU/g+J62h9mJQnf1XLu1RAW4F+Uvz9vc
+          Jh8w9PaPxNUzxMQ2WZYlxv8+JeL8x/i9Y/W8ZBRg1hE82r9ZWbdLY27vY7tsOaeN
+          JdN4xvmsnkAQlhfDpZuHwQKBgDzJ5uNOaZkdTvlx0ZkczjeT7vqZ3DICXD1KPYzM
+          BUV5yTiLut/kdUUujzghT0lLWFNpomUHIBieGzEFn7r1IhQ14gVf6jssmZ20w76t
+          swsZgoPZH41WCLzHWz1kF491JUjc7tLO16sknsYO39rWMTfGS0vbuwW80sKxFzF6
+          sY4BAoGAcOZy2mT/AaMO+KSEMrMcZOJeEXk4vhOV9+tJcPnAkUQRE6WVIOXfBCT5
+          1qlrWty/MsIsVIN4CEFu+2pXoxs/u7KL9fX2drUWVEORCvqjQjh/w9GhfiqA0Kz/
+          qpgCkXjo2O2pUN7GiPA2I8AH7tJkNCQVLex6juzLt1biPHZ1liM=
+          -----END RSA PRIVATE KEY-----
+        HOST: "3.85.219.67"
+        USERNAME: ubuntu
+        DEPLOY_PATH: "/var/www/html/holamundo_multi"
       run: |
         mkdir -p ~/.ssh
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
